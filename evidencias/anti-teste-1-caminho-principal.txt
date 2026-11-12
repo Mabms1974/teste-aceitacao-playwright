@@ -1,0 +1,51 @@
+﻿
+Running 1 test using 1 worker
+
+node.exe : (node:9888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:9888) War... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  Ô£ÿ  1 [chromium] ÔÇ║ tests\controle-de-gastos.spec.js:15:1 ÔÇ║ C1: registra um gasto e ele aparece na lista com o total atualizado (5.3s)
+
+
+  1) [chromium] ÔÇ║ tests\controle-de-gastos.spec.js:15:1 ÔÇ║ C1: registra um gasto e ele aparece na lista com o total atualizado 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('listitem')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('listitem') with timeout 5000ms
+      - waiting for getByRole('listitem')
+        14 ├ù locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      18 |   await page.getByRole('button', { name: 'Adicionar gasto' }).click();
+      19 |
+    > 20 |   await expect(page.getByRole('listitem')).toHaveCount(1);
+         |                                            ^
+      21 |   await expect(page.getByText('Total: R$ 12,50 ┬À 1 gasto')).toBeVisible();
+      22 | });
+      23 |
+        at C:\Users\Windows\Desktop\gastos\tests\controle-de-gastos.spec.js:20:44
+
+    Error Context: test-results\controle-de-gastos-C1-regi-d88ab-ista-com-o-total-atualizado-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\controle-de-gastos-C1-regi-d88ab-ista-com-o-total-atualizado-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\controle-de-gastos-C1-regi-d88ab-ista-com-o-total-atualizado-chromium\trace.zip
+
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  1 failed
+    [chromium] ÔÇ║ tests\controle-de-gastos.spec.js:15:1 ÔÇ║ C1: registra um gasto e ele aparece na lista com o total atualizado 

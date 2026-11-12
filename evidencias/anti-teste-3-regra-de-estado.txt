@@ -1,0 +1,50 @@
+﻿
+Running 1 test using 1 worker
+
+node.exe : (node:5820) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:5820) War... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  Ô£ÿ  1 [chromium] ÔÇ║ tests\controle-de-gastos.spec.js:36:1 ÔÇ║ C3: soma os gastos e mant├®m tudo depois de recarregar (5.4s)
+
+
+  1) [chromium] ÔÇ║ tests\controle-de-gastos.spec.js:36:1 ÔÇ║ C3: soma os gastos e mant├®m tudo depois de recarregar 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('listitem')
+    Expected: 3
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('listitem') with timeout 5000ms
+      - waiting for getByRole('listitem')
+        14 ├ù locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      45 |   // asser├º├úo de estado: tudo sobrevive ao reload
+      46 |   await page.reload();
+    > 47 |   await expect(page.getByRole('listitem')).toHaveCount(3);
+         |                                            ^
+      48 |   await expect(page.getByText('Total: R$ 60,00 ┬À 3 gastos')).toBeVisible();
+      49 | });
+        at C:\Users\Windows\Desktop\gastos\tests\controle-de-gastos.spec.js:47:44
+
+    Error Context: test-results\controle-de-gastos-C3-soma-a2221-m-tudo-depois-de-recarregar-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    test-results\controle-de-gastos-C3-soma-a2221-m-tudo-depois-de-recarregar-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\controle-de-gastos-C3-soma-a2221-m-tudo-depois-de-recarregar-chromium\trace.zip
+
+    ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+  1 failed
+    [chromium] ÔÇ║ tests\controle-de-gastos.spec.js:36:1 ÔÇ║ C3: soma os gastos e mant├®m tudo depois de recarregar 
